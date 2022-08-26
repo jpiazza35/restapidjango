@@ -25,20 +25,21 @@ SECRET_KEY = '*kb2s)^zzgozcpp7^3j&em@wc91l9&d2$@1rgtei2mabg(vmkf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework.routers',
     'profile_api',
 ]
 
@@ -102,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
